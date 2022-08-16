@@ -1,0 +1,99 @@
+//Create-Criando um usuário
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Thiago Oliveira",
+    "email": "thiago@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+//get- Obter todos os usuários
+GET http://localhost:5000/users
+
+###
+//get- Obter um único usuário
+
+GET http://localhost:5000/users/744d97e5-98de-4dcc-98e6-6db5f92dec95
+
+###
+//Update- alterar usuário
+PATCH  http://localhost:5000/users/744d97e5-98de-4dcc-98e6-6db5f92dec95
+Content-Type: application/json
+
+{
+    "name": "Beka M",
+    "email": "beka@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//DELETE- deletar usuário
+DELETE  http://localhost:5000/users/744d97e5-98de-4dcc-98e6-6db5f92dec95
+
+
+###
+//Login - Entrar com um usuário
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "thiago@gmail.com",
+    "password": "123456"
+}
+
+#########
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "beka@gmail.com",
+    "password": "123456"
+}
+
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+
+###
+//Obter todos os produtos
+GET http://localhost:5000/products
+
+###
+//Obter um único produto
+GET http://localhost:5000/products/4576362b-815d-4746-bbc4-ceb3026bf411
+
+###
+//Adicionar produto
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Produto 6",
+    "price": 9999
+}
+
+
+###
+//Alterar produto
+
+PATCH http://localhost:5000/products/d68dbd34-0754-4e11-b95e-24d15d280944
+Content-Type: application/json
+
+{
+    "name": "Produto ALT2",
+    "price": 56
+}
+
+###
+//DELETAR PRODUTO
+DELETE http://localhost:5000/products/5c399520-871e-4d68-a5bc-401513de311f
